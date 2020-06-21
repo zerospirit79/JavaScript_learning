@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 //1. Дан код:
 var a = 1,
     b = 1,
@@ -166,7 +166,7 @@ null == 0 - false
 null >= 0 - true
 null <= 0 - true*/
 
-
+/*
 // 8. *С помощью рекурсии организовать функцию возведения числа в степень.
 // Формат: function power(val, pow), где val – заданное число, pow – степень.
 function power(val, pow) {
@@ -234,4 +234,4 @@ function getDigitBeforeLastDigit(num) {
 
 
 let money = parseInt(prompt('Сколько денег вы хотите положить?'));
-alert('Ваша сумма ${money} ${getCase(money)} успешно зачислена.');
+alert(`Ваша сумма ${money} ${getCase(money)} успешно зачислена.`);
