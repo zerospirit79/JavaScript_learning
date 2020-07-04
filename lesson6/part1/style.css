@@ -1,0 +1,49 @@
+body {
+    margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider_item {
+    width: 640px;
+    height: 800px;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* opacity: 60%; */
+}
+
+.chevron {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    z-index: 2;
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.chevron-right {
+    left: 745px;
+
+}
+
+.hide-slider {
+    visibility: hidden;
+}
+
+.slide-in-right {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-left {
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
