@@ -114,3 +114,38 @@ class Game {
                 x: 1,
                 y: 1
             }, {
+                x: 2,
+                y: 2
+            }) ||
+            this.isLineWon({
+                x: 0,
+                y: 2
+            }, {
+                x: 1,
+                y: 1
+            }, {
+                x: 2,
+                y: 0
+            });
+    }
+
+    /**
+     * Проверка есть ли выигрышная ситуация на линии.
+     * @param {{x: int, y: int}} a 1-ая ячейка.
+     * @param {{x: int, y: int}} b 2-ая ячейка.
+     * @param {{x: int, y: int}} c 3-я ячейка.
+     * @returns {boolean} Вернет true, если линия выиграна, иначе false.
+     */
+    isLineWon(a, b, c) {
+        let value = this.status.mapValues[a.y][a.x] + this.status.mapValues[b.y][b.x] + this.status.mapValues[c.y][c.x];
+        return value === 'XXX' || value === '000';
+    }
+
+    /**
+     * Сообщает о победе.
+     */
+    sayWonPhrase() {
+        let figure = this.status.phase === 'X' ? 'Крестики' : 'Нолики';
+        alert(`${figure} выиграли!`);
+    }
+}

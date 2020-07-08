@@ -8,4 +8,4 @@ window.addEventListener('load', function () {
 
     board.renderMap();
     board.initEventHandlers();
-})
+});

@@ -122,16 +122,88 @@ class Game {
      * @returns {boolean} Вернет true, если игра выиграна, иначе false.
      */
     hasWon() {
-        return this.isLineWon({ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }) ||
-               this.isLineWon({ x: 0, y: 1 }, { x: 1, y: 1 }, { x: 2, y: 1 }) ||
-               this.isLineWon({ x: 0, y: 2 }, { x: 1, y: 2 }, { x: 2, y: 2 }) ||
+        return this.isLineWon({
+                x: 0,
+                y: 0
+            }, {
+                x: 1,
+                y: 0
+            }, {
+                x: 2,
+                y: 0
+            }) ||
+            this.isLineWon({
+                x: 0,
+                y: 1
+            }, {
+                x: 1,
+                y: 1
+            }, {
+                x: 2,
+                y: 1
+            }) ||
+            this.isLineWon({
+                x: 0,
+                y: 2
+            }, {
+                x: 1,
+                y: 2
+            }, {
+                x: 2,
+                y: 2
+            }) ||
 
-               this.isLineWon({ x: 0, y: 0 }, { x: 0, y: 1 }, { x: 0, y: 2 }) ||
-               this.isLineWon({ x: 1, y: 0 }, { x: 1, y: 1 }, { x: 1, y: 2 }) ||
-               this.isLineWon({ x: 2, y: 0 }, { x: 2, y: 1 }, { x: 2, y: 2 }) ||
+            this.isLineWon({
+                x: 0,
+                y: 0
+            }, {
+                x: 0,
+                y: 1
+            }, {
+                x: 0,
+                y: 2
+            }) ||
+            this.isLineWon({
+                x: 1,
+                y: 0
+            }, {
+                x: 1,
+                y: 1
+            }, {
+                x: 1,
+                y: 2
+            }) ||
+            this.isLineWon({
+                x: 2,
+                y: 0
+            }, {
+                x: 2,
+                y: 1
+            }, {
+                x: 2,
+                y: 2
+            }) ||
 
-               this.isLineWon({ x: 0, y: 0 }, { x: 1, y: 1 }, { x: 2, y: 2 }) ||
-               this.isLineWon({ x: 0, y: 2 }, { x: 1, y: 1 }, { x: 2, y: 0 });
+            this.isLineWon({
+                x: 0,
+                y: 0
+            }, {
+                x: 1,
+                y: 1
+            }, {
+                x: 2,
+                y: 2
+            }) ||
+            this.isLineWon({
+                x: 0,
+                y: 2
+            }, {
+                x: 1,
+                y: 1
+            }, {
+                x: 2,
+                y: 0
+            });
     }
 
     /**
@@ -154,7 +226,7 @@ class Game {
         alert(`${figure} выиграли!`);
     }
 }
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const game = new Game();
     const board = new Board();
     const status = new Status();
