@@ -1,0 +1,28 @@
+html {
+    background: white;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.white {
+    background: lightgoldenrodyellow;
+}
+
+.black {
+    background: grey;
+}
+
+tr:last-child td:first-child {
+    border-left: none;
+    border-bottom: none;
+}
